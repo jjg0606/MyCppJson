@@ -12,7 +12,6 @@ enum class JsoType
 	DOUBLE,
 	STR,
 	OBJECT,
-	SET,
 	LIST
 };
 

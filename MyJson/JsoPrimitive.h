@@ -1,8 +1,9 @@
 #pragma once
 #include "JsoBase.h"
+#include <string>
 
 /** File Desc : this file defines primitive classes **/
-/** primitive type : null, int, long long, float, double **/
+/** primitive type : null, int, long long, float, double, string **/
 
 // NullType Class is exactly same class with JsoBase
 typedef JsoBase JsoNull;
@@ -82,4 +83,21 @@ public:
 
 	double getValue();
 	void setValue(double val);
+};
+
+class JsoString
+	: public JsoBase
+{
+private:
+	std::string value;
+
+public:
+	// Constructor and Destructor
+	JsoString(const char* val);	// master Constructor
+	JsoString();
+	virtual ~JsoString();
+
+	std::string getValue();
+	void setValue(const char* val);
+
 };

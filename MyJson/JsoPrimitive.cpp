@@ -1,8 +1,6 @@
 #include "JsoPrimitive.h"
 #include <string>
 
-using namespace std;
-
 //////////////////////////////////////////////
 /*              JsoInt                      */
 //////////////////////////////////////////////
@@ -30,7 +28,7 @@ JsoInt::~JsoInt()
 /*public virtual*/
 const char* JsoInt::toString()
 {
-	return to_string(value).c_str();
+	return std::to_string(value).c_str();
 }
 
 /*public*/
@@ -73,7 +71,7 @@ JsoLong::~JsoLong()
 /*public virtual*/
 const char* JsoLong::toString()
 {
-	return to_string(value).c_str();
+	return std::to_string(value).c_str();
 }
 
 /*public*/
@@ -117,7 +115,7 @@ JsoFloat::~JsoFloat()
 /*public virtual*/
 const char* JsoFloat::toString()
 {
-	return to_string(value).c_str();
+	return std::to_string(value).c_str();
 }
 
 /*public*/
@@ -160,7 +158,7 @@ JsoDouble::~JsoDouble()
 /*public virtual*/
 const char* JsoDouble::toString()
 {
-	return to_string(value).c_str();
+	return std::to_string(value).c_str();
 }
 
 /*public*/
@@ -175,3 +173,40 @@ void JsoDouble::setValue(double val)
 	this->value = val;
 }
 #pragma endregion JsoDouble
+
+//////////////////////////////////////////////
+/*              JsoString                   */
+//////////////////////////////////////////////
+#pragma region JsoString
+/*public*/
+JsoString::JsoString(const char* val)
+	: JsoBase(JsoType::STR), value(val)
+{
+
+}
+
+/*public*/
+JsoString::JsoString()
+	: JsoString("")
+{
+
+}
+
+/*public virtual*/
+JsoString::~JsoString()
+{
+	value.clear();
+}
+
+std::string JsoString::getValue()
+{
+	return value;
+}
+
+void JsoString::setValue(const char* val)
+{
+	value.clear();
+	value.append(val);
+}
+#pragma endregion JsoString
+

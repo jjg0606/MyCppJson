@@ -145,6 +145,7 @@
   <ItemGroup>
     <ClCompile Include="JsoBase.cpp" />
     <ClCompile Include="JsoPrimitive.cpp" />
+    <ClCompile Include="JsoReference.cpp" />
     <ClCompile Include="main.cpp" />
   </ItemGroup>
   <ItemGroup>

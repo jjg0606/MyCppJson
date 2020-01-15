@@ -9,7 +9,7 @@ JsoBase::JsoBase(JsoType type)
 
 /*public*/ 
 JsoBase::JsoBase()
-: JsoBase(JsoType::NULL)
+: JsoBase(JsoType::NUL)
 {
 
 }
@@ -27,7 +27,7 @@ JsoType JsoBase::getType()
 }
 
 /*public virtual*/
-const char* JsoBase::toString()
+std::string JsoBase::toString()
 {
 	return "";
 }
@@ -35,5 +35,5 @@ const char* JsoBase::toString()
 /*public virtual*/
 bool JsoBase::isNull()
 {
-	return this->type == JsoType::NULL;
+	return this->type == JsoType::NUL;
 }

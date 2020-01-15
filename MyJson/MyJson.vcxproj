@@ -151,8 +151,6 @@
   <ItemGroup>
     <ClInclude Include="Jso.h" />
     <ClInclude Include="JsoBase.h" />
-    <ClInclude Include="JsoPrimitive.h" />
-    <ClInclude Include="JsoReference.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

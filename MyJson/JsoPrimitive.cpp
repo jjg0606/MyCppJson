@@ -1,5 +1,4 @@
-#include "JsoPrimitive.h"
-#include <string>
+#include "JsoBase.h"
 
 //////////////////////////////////////////////
 /*              JsoInt                      */
@@ -26,9 +25,9 @@ JsoInt::~JsoInt()
 }
 
 /*public virtual*/
-const char* JsoInt::toString()
+std::string JsoInt::toString()
 {
-	return std::to_string(value).c_str();
+	return std::to_string(value);
 }
 
 /*public*/
@@ -69,9 +68,9 @@ JsoLong::~JsoLong()
 }
 
 /*public virtual*/
-const char* JsoLong::toString()
+std::string JsoLong::toString()
 {
-	return std::to_string(value).c_str();
+	return std::to_string(value);
 }
 
 /*public*/
@@ -113,9 +112,9 @@ JsoFloat::~JsoFloat()
 }
 
 /*public virtual*/
-const char* JsoFloat::toString()
+std::string JsoFloat::toString()
 {
-	return std::to_string(value).c_str();
+	return std::to_string(value);
 }
 
 /*public*/
@@ -156,9 +155,9 @@ JsoDouble::~JsoDouble()
 }
 
 /*public virtual*/
-const char* JsoDouble::toString()
+std::string JsoDouble::toString()
 {
-	return std::to_string(value).c_str();
+	return std::to_string(value);
 }
 
 /*public*/
@@ -196,6 +195,12 @@ JsoString::JsoString()
 JsoString::~JsoString()
 {
 	value.clear();
+}
+
+/*public virtual*/
+std::string JsoString::toString()
+{
+	return value;
 }
 
 std::string JsoString::getValue()

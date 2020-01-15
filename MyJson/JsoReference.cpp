@@ -1,6 +1,8 @@
-#include "JsoReference.h"
-#include <string>
+#include "JsoBase.h"
 
+//////////////////////////////////////////////
+/*              JsoList                     */
+//////////////////////////////////////////////
 #pragma region JsoList
 /*public*/
 JsoList::JsoList()
@@ -63,6 +65,10 @@ JsoBase* JsoList::operator[](int index)
 }
 #pragma endregion JsoList
 
+
+//////////////////////////////////////////////
+/*              JsoObj                      */
+//////////////////////////////////////////////
 #pragma region JsoObject
 /*public*/
 JsoObject::JsoObject()
@@ -136,4 +142,4 @@ JsoBase* JsoObject::operator[](const char* key)
 
 	return iter->second;
 }
-#pragma endregion
+#pragma endregion JsoObject

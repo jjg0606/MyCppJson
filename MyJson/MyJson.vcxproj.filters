@@ -35,11 +35,5 @@
     <ClInclude Include="Jso.h">
       <Filter>헤더 파일</Filter>
     </ClInclude>
-    <ClInclude Include="JsoPrimitive.h">
-      <Filter>헤더 파일</Filter>
-    </ClInclude>
-    <ClInclude Include="JsoReference.h">
-      <Filter>헤더 파일</Filter>
-    </ClInclude>
   </ItemGroup>
 </Project>

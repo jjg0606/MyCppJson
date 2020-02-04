@@ -16,6 +16,14 @@ public:
 	// Common Virtual Function
 	virtual std::string toString();
 
-	int getValue();
+	int getValue() const;
 	void setValue(int val);
+
+	JsoInt& operator=(const JsoInt& operand);
+	JsoInt operator+(const JsoInt& operand);
+	JsoInt operator-(const JsoInt& operand);
+	JsoInt operator*(const JsoInt& operand);
+	JsoInt operator/(const JsoInt& operand);
+	JsoInt operator%(const JsoInt& operand);
+	bool operator==(const JsoInt& operand);	
 };

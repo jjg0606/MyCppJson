@@ -144,13 +144,26 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="JsoBase.cpp" />
-    <ClCompile Include="JsoPrimitive.cpp" />
-    <ClCompile Include="JsoReference.cpp" />
+    <ClCompile Include="JsoDouble.cpp" />
+    <ClCompile Include="JsoFloat.cpp" />
+    <ClCompile Include="JsoInt.cpp" />
+    <ClCompile Include="JsoList.cpp" />
+    <ClCompile Include="JsoLong.cpp" />
+    <ClCompile Include="JsoObject.cpp" />
+    <ClCompile Include="JsoString.cpp" />
     <ClCompile Include="main.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Jso.h" />
     <ClInclude Include="JsoBase.h" />
+    <ClInclude Include="JsoDouble.h" />
+    <ClInclude Include="JsoFloat.h" />
+    <ClInclude Include="JsoInt.h" />
+    <ClInclude Include="JsoList.h" />
+    <ClInclude Include="JsoLong.h" />
+    <ClInclude Include="JsoObject.h" />
+    <ClInclude Include="JsoPrimitive.h" />
+    <ClInclude Include="JsoString.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

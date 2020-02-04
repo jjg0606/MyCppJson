@@ -27,7 +27,7 @@ std::string JsoInt::toString()
 }
 
 /*public*/
-int JsoInt::getValue()
+int JsoInt::getValue() const
 {
 	return value;
 }
@@ -36,4 +36,47 @@ int JsoInt::getValue()
 void JsoInt::setValue(int val)
 {
 	value = val;
+}
+
+/*public*/
+JsoInt& JsoInt::operator=(const JsoInt& operand)
+{
+	this->setValue(operand.getValue());
+	return *this;
+}
+
+/*public*/
+JsoInt JsoInt::operator+(const JsoInt& operand)
+{
+	return JsoInt(this->getValue() + operand.getValue());
+}
+
+/*public*/
+JsoInt JsoInt::operator-(const JsoInt& operand)
+{
+	return JsoInt(this->getValue() - operand.getValue());
+}
+
+/*public*/
+JsoInt JsoInt::operator*(const JsoInt& operand)
+{
+
+}
+
+/*public*/
+JsoInt JsoInt::operator/(const JsoInt& operand)
+{
+
+}
+
+/*public*/
+JsoInt JsoInt::operator%(const JsoInt& operand)
+{
+
+}
+
+/*public*/
+bool JsoInt::operator==(const JsoInt& operand)
+{
+
 }
